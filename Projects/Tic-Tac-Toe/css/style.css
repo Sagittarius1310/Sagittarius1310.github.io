@@ -1,0 +1,160 @@
+body {
+padding: 0;
+margin: 0;
+}
+
+#tic-tac-toe {
+position: absolute;
+display: block;
+text-align: center;
+height: 100%;
+width: 100%;
+}
+
+.logo{
+display: block;
+text-align: center;
+}
+
+/* !!! STATS START !!! */
+.stats {
+position: relative;
+height: 100px;
+}
+
+.x-won {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 230px;
+border: 2px solid #CCCCCC;
+border-radius: 15px;
+}
+
+.o-won {
+display: block;
+margin-left: auto;
+margin-right: auto;
+margin-top: 5px;
+width: 230px;
+border: 2px solid #CCCCCC;
+border-radius: 15px;
+}
+
+.x-sign {
+float: left;
+border-right: 2px solid #CCCCCC;
+background-color: #EEEEEE;
+border-radius: 13px 0 0 13px;
+}
+
+.x-times {
+float: right;
+border-left: 2px solid #CCCCCC;
+background-color: #EEEEEE;
+border-radius: 0 13px 13px 0;
+}
+
+.o-sign {
+float: left;
+border-right: 2px solid #CCCCCC;
+background-color: #EEEEEE;
+border-radius: 13px 0 0 13px;
+}
+
+.o-times {
+float: right;
+border-left: 2px solid #CCCCCC;
+background-color: #EEEEEE;
+border-radius: 0 13px 13px 0;
+}
+
+#x {
+display: inline-block;
+padding-top: 10px;
+padding-bottom: 10px;
+width: 70px;
+font-weight: bold;
+}
+
+#o {
+display: inline-block;
+padding-top: 10px;
+padding-bottom: 10px;
+width: 70px;
+font-weight: bold;
+}
+
+/* !!! STATS END !!! */
+
+
+
+/* !!! GAME START !!! */
+
+.first {
+display: block;
+margin-left: auto;
+margin-right: auto;
+padding-right: 40px;
+width: 500px;
+}
+
+.second {
+display: block;
+margin-left: auto;
+margin-right: auto;
+padding-right: 40px;
+width: 500px;
+}
+
+.third {
+display: block;
+margin-left: auto;
+margin-right: auto;
+padding-right: 40px;
+width: 500px;
+}
+
+#first-line {
+list-style: none;
+display: inline-block;
+margin-right: 8px;
+margin-left: 8px;
+width: 62px;
+height: 62px;
+border: 1px solid #5C5C5C;
+border-radius: 6px;
+background: linear-gradient(white, #E6E6E6) fixed;
+cursor: pointer;
+}
+
+#second-line {
+list-style: none;
+display: inline-block;
+margin-right: 8px;
+margin-left: 8px;
+margin-top: 24px;
+width: 62px;
+height: 62px;
+border: 1px solid #5C5C5C;
+border-radius: 6px;
+background: linear-gradient(white, #ACACAC) fixed;
+cursor: pointer;
+}
+
+#third-line {
+list-style: none;
+display: inline-block;
+margin-right: 8px;
+margin-left: 8px;
+margin-top: 24px;
+width: 62px;
+height: 62px;
+border: 1px solid #5C5C5C;
+border-radius: 6px;
+background: linear-gradient(white, #ACACAC) fixed;
+box-shadow: 3px;
+cursor: pointer;
+}
+/* Button width: 240px*/
+/* !!! GAME END !!! */

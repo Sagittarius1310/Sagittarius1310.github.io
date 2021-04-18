@@ -3,6 +3,11 @@ body {
     margin: 0;
 }
 
+#header {
+    background-color: black;
+    height: 50px;
+}
+
 #tic-tac-toe {
     position: absolute;
     display: block;
@@ -15,6 +20,8 @@ body {
     display: block;
     text-align: center;
 }
+
+
 
 /* !!! STATS START !!! */
 .stats {

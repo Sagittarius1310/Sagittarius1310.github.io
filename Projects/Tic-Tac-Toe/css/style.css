@@ -84,13 +84,11 @@ body {
     width: 70px;
     font-weight: bold;
 }
-
 /* !!! STATS END !!! */
 
 
 
 /* !!! GAME START !!! */
-
 .first {
     display: block;
     margin-left: auto;
@@ -196,14 +194,10 @@ body {
     cursor: pointer;
 }
 
-li {
-    position: relative;
-}
-
 .cell-sign {
-    position: absolute;
-    padding-top: 21px;
-    padding-left: 0px;
+    padding-top: 2px;
+    font-size: 50px;
+    opacity: 0.3;
 }
 /* Button width: 240px*/
 /* !!! GAME END !!! */

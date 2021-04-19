@@ -46,6 +46,7 @@ function addTask() {
     }
     save();
 }
+
 addButton.onclick = addTask;
 
 function deleteTask() {

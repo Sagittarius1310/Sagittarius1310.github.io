@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=500">
+	<meta name="viewport" content="width=300">
 	<title>Tic Tac Toe</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="js/jquery-3.6.0.min.js"></script>
@@ -16,33 +16,33 @@
 		</div>
 		<div class="stats">
 			<div class="x-won">
-				<span id="x" class="x-sign">X won</span>
-				<span id="x" class="number-of-x-wins">0</span>
-				<span id="x" class="x-times">time(s)</span>
+				<span id="x-stat" class="x-sign">X won</span>
+				<span id="x-stat" class="number-of-x-wins">0</span>
+				<span id="x-stat" class="x-times">time(s)</span>
 			</div>
 			<div class="o-won">
-				<span id="o" class="o-sign">O won</span>
-				<span id="o" class="number-of-o-wins">0</span>
-				<span id="o" class="o-times">time(s)</span>
+				<span id="o-stat" class="o-sign">O won</span>
+				<span id="o-stat" class="number-of-o-wins">0</span>
+				<span id="o-stat" class="o-times">time(s)</span>
 			</div>
 		</div>
 	</div>
 	<div class="game">
 		<div class="field">
 			<span class="first">
-				<div id="first-line" class="one"><div class="cell-sign">+</div></div>
-				<div id="first-line" class="two"><div class="cell-sign">+</div></div>
-				<div id="first-line" class="three"><div class="cell-sign">+</div></div>
+				<div id="first-line" class="one"><div id="cell-sign1" class="cell-sign1">+</div></div>
+				<div id="first-line" class="two"><div id="cell-sign2" class="cell-sign2">+</div></div>
+				<div id="first-line" class="three"><div id="cell-sign3" class="cell-sign3">+</div></div>
 			</span>
 			<span class="second">
-				<div id="second-line" class="four"><div class="cell-sign">+</div></div>
-				<div id="second-line" class="five"><div class="cell-sign">+</div></div>
-				<div id="second-line" class="six"><div class="cell-sign">+</div></div>
+				<div id="second-line" class="four"><div id="cell-sign4" class="cell-sign4">+</div></div>
+				<div id="second-line" class="five"><div id="cell-sign5" class="cell-sign5">+</div></div>
+				<div id="second-line" class="six"><div id="cell-sign6" class="cell-sign6">+</div></div>
 			</span>
 			<span class="third">
-				<div id="third-line" class="seven"><div class="cell-sign">+</div></div>
-				<div id="third-line" class="eight"><div class="cell-sign">+</div></div>
-				<div id="third-line" class="nine"><div class="cell-sign">+</div></div>
+				<div id="third-line" class="seven"><div id="cell-sign7" class="cell-sign7">+</div></div>
+				<div id="third-line" class="eight"><div id="cell-sign8" class="cell-sign8">+</div></div>
+				<div id="third-line" class="nine"><div id="cell-sign9" class="cell-sign9">+</div></div>
 			</span>
 		</div>
 		<div id="restart">

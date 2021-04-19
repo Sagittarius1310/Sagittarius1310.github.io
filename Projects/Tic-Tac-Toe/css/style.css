@@ -72,7 +72,7 @@ body {
     border-radius: 0 13px 13px 0;
 }
 
-#x {
+#x-stat {
     display: inline-block;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -80,7 +80,7 @@ body {
     font-weight: bold;
 }
 
-#o {
+#o-stat {
     display: inline-block;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -196,7 +196,55 @@ body {
     cursor: pointer;
 }
 
-.cell-sign {
+.cell-sign1 {
+    padding-top: 2px;
+    font-size: 50px;
+    opacity: 0.3;
+}
+
+.cell-sign2 {
+    padding-top: 2px;
+    font-size: 50px;
+    opacity: 0.3;
+}
+
+.cell-sign3 {
+    padding-top: 2px;
+    font-size: 50px;
+    opacity: 0.3;
+}
+
+.cell-sign4 {
+    padding-top: 2px;
+    font-size: 50px;
+    opacity: 0.3;
+}
+
+.cell-sign5 {
+    padding-top: 2px;
+    font-size: 50px;
+    opacity: 0.3;
+}
+
+.cell-sign6 {
+    padding-top: 2px;
+    font-size: 50px;
+    opacity: 0.3;
+}
+
+.cell-sign7 {
+    padding-top: 2px;
+    font-size: 50px;
+    opacity: 0.3;
+}
+
+.cell-sign8 {
+    padding-top: 2px;
+    font-size: 50px;
+    opacity: 0.3;
+}
+
+.cell-sign9 {
     padding-top: 2px;
     font-size: 50px;
     opacity: 0.3;
@@ -234,3 +282,26 @@ body {
     letter-spacing: 5px;
 }
 /* !!! GAME END !!! */
+
+/* CELLS ACTIVE STYLES START*/
+.x-sign-cell {
+    padding-top: 2px;
+    font-size: 50px;
+    color: white;
+    width: 62px;
+    height: 60px;
+    border-radius: 5px;
+    background: linear-gradient(#FFA0A4, #FF5546);
+}
+
+.o-sign-cell {
+    padding-top: 2px;
+    font-size: 50px;
+    color: white;
+    width: 62px;
+    height: 60px;
+    border-radius: 5px;
+    background: linear-gradient(#ACBDFF, #464FFF);
+}
+
+/* CELLS ACTIVE STYLES END*/

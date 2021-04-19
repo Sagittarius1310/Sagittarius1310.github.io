@@ -4,7 +4,8 @@ $(document).ready(function() {
     var o_win = 0;
     var count = 0;
     
-    // Restart button
+    // For restart
+    var win_status = false;
     var id = "";
 
     // Sign
@@ -25,10 +26,12 @@ $(document).ready(function() {
                 alert("The X sign won");
                 x_win++;
                 $(".number-of-x-wins").text(x_win);
+                win_status = true;
             } else if (one == "O") {
                 alert("The O sign won");
                 o_win++;
                 $(".number-of-o-wins").text(o_win);
+                win_status = true;
             }
         } else if (four == five && five == six) {
             if (four == "X") {
@@ -39,66 +42,79 @@ $(document).ready(function() {
                 alert("The O sign won");
                 o_win++;
                 $(".number-of-o-wins").text(o_win);
+                win_status = true;
             }
         } else if (seven == eight && eight == nine) {
             if (seven == "X") {
                 alert("The X sign won");
                 x_win++;
                 $(".number-of-x-wins").text(x_win);
+                win_status = true;
             } else if (seven == "O") {
                 alert("The O sign won");
                 o_win++;
                 $(".number-of-o-wins").text(o_win);
+                win_status = true;
             }
         } else if (one == four && four == seven) {
             if (one == "X") {
                 alert("The X sign won");
                 x_win++;
                 $(".number-of-x-wins").text(x_win);
+                win_status = true;
             } else if (one == "O") {
                 alert("The O sign won");
                 o_win++;
                 $(".number-of-o-wins").text(o_win);
+                win_status = true;
             }
         } else if (two == five && five == eight) {
             if (two == "X") {
                 alert("The X sign won");
                 x_win++;
                 $(".number-of-x-wins").text(x_win);
+                win_status = true;
             } else if (two == "O") {
                 alert("The O sign won");
                 o_win++;
                 $(".number-of-o-wins").text(o_win);
+                win_status = true;
             }
         } else if (three == six && six == nine) {
             if (three == "X") {
                 alert("The X sign won");
                 x_win++;
                 $(".number-of-x-wins").text(x_win);
+                win_status = true;
             } else if (three == "O") {
                 alert("The O sign won");
                 o_win++;
                 $(".number-of-o-wins").text(o_win);
+                win_status = true;
             }
         } else if (one == five && five == nine) {
             if (one == "X") {
                 alert("The X sign won");
                 x_win++;
                 $(".number-of-x-wins").text(x_win);
+                win_status = true;
             } else if (one == "O") {
                 alert("The O sign won");
                 o_win++;
                 $(".number-of-o-wins").text(o_win);
+                win_status = true;
             }
         } else if (three == five && five == seven) {
             if (three == "X") {
                 alert("The X sign won");
                 x_win++;
                 $(".number-of-x-wins").text(x_win);
+                win_status = true;
             } else if (three == "O") {
                 alert("The O sign won");
                 o_win++;
                 $(".number-of-o-wins").text(o_win);
+                win_status = true;
             }
         }
 
@@ -168,7 +184,8 @@ $(document).ready(function() {
 
             id = "";
             count = 0;
-        } else if (count > 4) {
+            win_status = false;
+        } else if (win_status == true) {
             alert("Restart game");
 
             one = "";
@@ -202,6 +219,7 @@ $(document).ready(function() {
             $("#cell-sign9").text("+");
 
             count = 0;
+            win_status = false;
         }
     }
 

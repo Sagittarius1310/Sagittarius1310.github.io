@@ -1,6 +1,9 @@
 # Tic-Tac-Toe Game
 A simple Tic-Tac-Toe game that was made in 3 days.
 
+### Demo:
+https://sagittarius1310.github.io/Projects/Tic-Tac-Toe/index.html
+
 ## ⚡ Technologies
 ![HTML5](https://img.shields.io/badge/-HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/-CSS3-1572B6?style=flat-square&logo=css3)

@@ -1,121 +1,39 @@
 $(document).ready(function() {
     // Info
-    var x_win = 0;
-    var o_win = 0;
-    var count = 0;
+    let x_win = 0;
+    let o_win = 0;
+    let count = 0;
     
     // For restart
-    var win_status = false;
-    var id = "";
-
-    // Sign
-    var one = "";
-    var two = "";
-    var three = "";
-    var four = "";
-    var five = "";
-    var six = "";
-    var seven = "";
-    var eight = "";
-    var nine = "";
+    let win_status = false;
+    let id = "";
 
     // Win combinations
     function win() {
-        if (one == two && two == three) {
-            if (one == "X") {
+        if ($("#cell-sign1").hasClass("x-sign-cell") && $("#cell-sign2").hasClass("x-sign-cell") && $("#cell-sign3").hasClass("x-sign-cell") ||
+            $("#cell-sign4").hasClass("x-sign-cell") && $("#cell-sign5").hasClass("x-sign-cell") && $("#cell-sign6").hasClass("x-sign-cell") ||
+            $("#cell-sign7").hasClass("x-sign-cell") && $("#cell-sign8").hasClass("x-sign-cell") && $("#cell-sign9").hasClass("x-sign-cell") ||
+            $("#cell-sign1").hasClass("x-sign-cell") && $("#cell-sign4").hasClass("x-sign-cell") && $("#cell-sign7").hasClass("x-sign-cell") ||
+            $("#cell-sign2").hasClass("x-sign-cell") && $("#cell-sign5").hasClass("x-sign-cell") && $("#cell-sign8").hasClass("x-sign-cell") ||
+            $("#cell-sign3").hasClass("x-sign-cell") && $("#cell-sign6").hasClass("x-sign-cell") && $("#cell-sign9").hasClass("x-sign-cell") ||
+            $("#cell-sign1").hasClass("x-sign-cell") && $("#cell-sign5").hasClass("x-sign-cell") && $("#cell-sign9").hasClass("x-sign-cell") ||
+            $("#cell-sign3").hasClass("x-sign-cell") && $("#cell-sign5").hasClass("x-sign-cell") && $("#cell-sign7").hasClass("x-sign-cell")) {
                 alert("The X sign won");
                 x_win++;
                 $(".number-of-x-wins").text(x_win);
                 win_status = true;
-            } else if (one == "O") {
+        } else if ($("#cell-sign1").hasClass("o-sign-cell") && $("#cell-sign2").hasClass("o-sign-cell") && $("#cell-sign3").hasClass("o-sign-cell") ||
+            $("#cell-sign4").hasClass("o-sign-cell") && $("#cell-sign5").hasClass("o-sign-cell") && $("#cell-sign6").hasClass("o-sign-cell") ||
+            $("#cell-sign7").hasClass("o-sign-cell") && $("#cell-sign8").hasClass("o-sign-cell") && $("#cell-sign9").hasClass("o-sign-cell") ||
+            $("#cell-sign1").hasClass("o-sign-cell") && $("#cell-sign4").hasClass("o-sign-cell") && $("#cell-sign7").hasClass("o-sign-cell") ||
+            $("#cell-sign2").hasClass("o-sign-cell") && $("#cell-sign5").hasClass("o-sign-cell") && $("#cell-sign8").hasClass("o-sign-cell") ||
+            $("#cell-sign3").hasClass("o-sign-cell") && $("#cell-sign6").hasClass("o-sign-cell") && $("#cell-sign9").hasClass("o-sign-cell") ||
+            $("#cell-sign1").hasClass("o-sign-cell") && $("#cell-sign5").hasClass("o-sign-cell") && $("#cell-sign9").hasClass("o-sign-cell") ||
+            $("#cell-sign3").hasClass("o-sign-cell") && $("#cell-sign5").hasClass("o-sign-cell") && $("#cell-sign7").hasClass("o-sign-cell")) {
                 alert("The O sign won");
                 o_win++;
                 $(".number-of-o-wins").text(o_win);
                 win_status = true;
-            }
-        } else if (four == five && five == six) {
-            if (four == "X") {
-                alert("The X sign won");
-                x_win++;
-                $(".number-of-x-wins").text(x_win);
-            } else if (four == "O") {
-                alert("The O sign won");
-                o_win++;
-                $(".number-of-o-wins").text(o_win);
-                win_status = true;
-            }
-        } else if (seven == eight && eight == nine) {
-            if (seven == "X") {
-                alert("The X sign won");
-                x_win++;
-                $(".number-of-x-wins").text(x_win);
-                win_status = true;
-            } else if (seven == "O") {
-                alert("The O sign won");
-                o_win++;
-                $(".number-of-o-wins").text(o_win);
-                win_status = true;
-            }
-        } else if (one == four && four == seven) {
-            if (one == "X") {
-                alert("The X sign won");
-                x_win++;
-                $(".number-of-x-wins").text(x_win);
-                win_status = true;
-            } else if (one == "O") {
-                alert("The O sign won");
-                o_win++;
-                $(".number-of-o-wins").text(o_win);
-                win_status = true;
-            }
-        } else if (two == five && five == eight) {
-            if (two == "X") {
-                alert("The X sign won");
-                x_win++;
-                $(".number-of-x-wins").text(x_win);
-                win_status = true;
-            } else if (two == "O") {
-                alert("The O sign won");
-                o_win++;
-                $(".number-of-o-wins").text(o_win);
-                win_status = true;
-            }
-        } else if (three == six && six == nine) {
-            if (three == "X") {
-                alert("The X sign won");
-                x_win++;
-                $(".number-of-x-wins").text(x_win);
-                win_status = true;
-            } else if (three == "O") {
-                alert("The O sign won");
-                o_win++;
-                $(".number-of-o-wins").text(o_win);
-                win_status = true;
-            }
-        } else if (one == five && five == nine) {
-            if (one == "X") {
-                alert("The X sign won");
-                x_win++;
-                $(".number-of-x-wins").text(x_win);
-                win_status = true;
-            } else if (one == "O") {
-                alert("The O sign won");
-                o_win++;
-                $(".number-of-o-wins").text(o_win);
-                win_status = true;
-            }
-        } else if (three == five && five == seven) {
-            if (three == "X") {
-                alert("The X sign won");
-                x_win++;
-                $(".number-of-x-wins").text(x_win);
-                win_status = true;
-            } else if (three == "O") {
-                alert("The O sign won");
-                o_win++;
-                $(".number-of-o-wins").text(o_win);
-                win_status = true;
-            }
         }
 
         $("#cell-sign1").click(function() {
@@ -131,7 +49,6 @@ $(document).ready(function() {
             restart();
         });
         $("#cell-sign5").click(function() {
-            
             restart();
         });
         $("#cell-sign6").click(function() {
@@ -152,15 +69,7 @@ $(document).ready(function() {
     function restart() {
         // Zeroing classes and variables. Returning the game to its original form.
         if (id == "restart") {
-            one = "";
-            two = "";
-            three = "";
-            four = "";
-            five = "";
-            six = "";
-            seven = "";
-            eight = "";
-            nine = "";
+            // The script will go this way, if the "Restart" button was pressed
 
             $("#cell-sign1").attr("class", "cell-sign1");
             $("#cell-sign2").attr("class", "cell-sign2");
@@ -186,17 +95,9 @@ $(document).ready(function() {
             count = 0;
             win_status = false;
         } else if (win_status == true) {
-            alert("Restart game");
+            // The script will go this way, if the game was completed due to the victory of one of the signs
 
-            one = "";
-            two = "";
-            three = "";
-            four = "";
-            five = "";
-            six = "";
-            seven = "";
-            eight = "";
-            nine = "";
+            alert("Restarting game...");
 
             $("#cell-sign1").attr("class", "cell-sign1");
             $("#cell-sign2").attr("class", "cell-sign2");
@@ -229,258 +130,247 @@ $(document).ready(function() {
         restart();
     });
     
-    // Put sign in cell
-    if (one == "" && two == "" && three == "" && four == "" && five == "" && six == "" && seven == "" && eight == "" && nine == "") {
-        $(".one").click(function(){
-            var sign = $(".cell-sign1").text();
-            
-            if (count % 2 == 0) {
-                if (sign == "+") {
-                    $(".cell-sign1").addClass("x-sign-cell");
-                    $(".cell-sign1").text("X");
-                    $(".cell-sign1").removeClass("cell-sign1");
-                    one = "X";
-                    count++;
-                } else {
-                    alert('This cell already contains a sign');
-                }
+    // Insert a character into the first cell of the playing field
+    $(".one").click(function(){
+        var sign = $(".cell-sign1").text();
+        
+        if (count % 2 == 0) {
+            if (sign == "+") {
+                $(".cell-sign1").addClass("x-sign-cell");
+                $(".cell-sign1").text("X");
+                $(".cell-sign1").removeClass("cell-sign1");
+                count++;
             } else {
-                if (sign == "+") {
-                    $(".cell-sign1").addClass("o-sign-cell");
-                    $(".cell-sign1").text("O");
-                    $(".cell-sign1").removeClass("cell-sign1");
-                    one = "O";
-                    count++;
-                } else {
-                    alert('This cell already contains a sign');
-                }
+                alert('This cell already contains a sign');
             }
-            
-            win();
-        });
-
-        $(".two").click(function(){
-            var sign = $(".cell-sign2").text();
-            
-            if (count % 2 == 0) {
-                if (sign == "+") {
-                    $(".cell-sign2").addClass("x-sign-cell");
-                    $(".cell-sign2").text("X");
-                    $(".cell-sign2").removeClass("cell-sign2");
-                    two = "X";
-                    count++;
-                } else {
-                    alert('This cell already contains a sign');
-                }
-            } else if (count % 2 != 0) {
-                if (sign == "+") {
-                    $(".cell-sign2").addClass("o-sign-cell");
-                    $(".cell-sign2").text("O");
-                    $(".cell-sign2").removeClass("cell-sign2");
-                    two = "O";
-                    count++;
-                } else {
-                    alert('This cell already contains a sign');
-                }
+        } else {
+            if (sign == "+") {
+                $(".cell-sign1").addClass("o-sign-cell");
+                $(".cell-sign1").text("O");
+                $(".cell-sign1").removeClass("cell-sign1");
+                count++;
+            } else {
+                alert('This cell already contains a sign');
             }
+        }
+        
+        win();
+    });
 
-            win();
-        });
-
-        $(".three").click(function(){
-            var sign = $(".cell-sign3").text();
-            
-            if (count % 2 == 0) {
-                if (sign == "+") {
-                    $(".cell-sign3").addClass("x-sign-cell");
-                    $(".cell-sign3").text("X");
-                    $(".cell-sign3").removeClass("cell-sign3");
-                    three = "X";
-                    count++;
-                } else {
-                    alert('This cell already contains a sign');
-                }
-            } else if (count % 2 != 0) {
-                if (sign == "+") {
-                    $(".cell-sign3").addClass("o-sign-cell");
-                    $(".cell-sign3").text("O");
-                    $(".cell-sign3").removeClass("cell-sign3");
-                    three = "O";
-                    count++;
-                } else {
-                    alert('This cell already contains a sign');
-                }
+    // Insert a character into the second cell of the playing field
+    $(".two").click(function(){
+        var sign = $(".cell-sign2").text();
+        
+        if (count % 2 == 0) {
+            if (sign == "+") {
+                $(".cell-sign2").addClass("x-sign-cell");
+                $(".cell-sign2").text("X");
+                $(".cell-sign2").removeClass("cell-sign2");
+                count++;
+            } else {
+                alert('This cell already contains a sign');
             }
-            
-            win();
-        });
+        } else if (count % 2 != 0) {
+            if (sign == "+") {
+                $(".cell-sign2").addClass("o-sign-cell");
+                $(".cell-sign2").text("O");
+                $(".cell-sign2").removeClass("cell-sign2");
 
-        $(".four").click(function(){
-            var sign = $(".cell-sign4").text();
-            
-            if (count % 2 == 0) {
-                if (sign == "+") {
-                    $(".cell-sign4").addClass("x-sign-cell");
-                    $(".cell-sign4").text("X");
-                    $(".cell-sign4").removeClass("cell-sign4");
-                    four = "X";
-                    count++;
-                } else {
-                    alert('This cell already contains a sign');
-                }
-            } else if (count % 2 != 0) {
-                if (sign == "+") {
-                    $(".cell-sign4").addClass("o-sign-cell");
-                    $(".cell-sign4").text("O");
-                    $(".cell-sign4").removeClass("cell-sign4");
-                    four = "O";
-                    count++;
-                } else {
-                    alert('This cell already contains a sign');
-                }
+                count++;
+            } else {
+                alert('This cell already contains a sign');
             }
+        }
 
-            win();
-        });
+        win();
+    });
 
-        $(".five").click(function(){
-            var sign = $(".cell-sign5").text();
-            
-            if (count % 2 == 0) {
-                if (sign == "+") {
-                    $(".cell-sign5").addClass("x-sign-cell");
-                    $(".cell-sign5").text("X");
-                    $(".cell-sign5").removeClass("cell-sign5");
-                    five = "X";
-                    count++;
-                } else {
-                    alert('This cell already contains a sign');
-                }
-            } else if (count % 2 != 0) {
-                if (sign == "+") {
-                    $(".cell-sign5").addClass("o-sign-cell");
-                    $(".cell-sign5").text("O");
-                    $(".cell-sign5").removeClass("cell-sign5");
-                    five = "O";
-                    count++;
-                } else {
-                    alert('This cell already contains a sign');
-                }
+    // Insert a character into the third cell of the playing field
+    $(".three").click(function(){
+        var sign = $(".cell-sign3").text();
+        
+        if (count % 2 == 0) {
+            if (sign == "+") {
+                $(".cell-sign3").addClass("x-sign-cell");
+                $(".cell-sign3").text("X");
+                $(".cell-sign3").removeClass("cell-sign3");
+                count++;
+            } else {
+                alert('This cell already contains a sign');
             }
-
-            win();
-        });
-
-        $(".six").click(function(){
-            var sign = $(".cell-sign6").text();
-            
-            if (count % 2 == 0) {
-                if (sign == "+") {
-                    $(".cell-sign6").addClass("x-sign-cell");
-                    $(".cell-sign6").text("X");
-                    $(".cell-sign6").removeClass("cell-sign6");
-                    six = "X";
-                    count++;
-                } else {
-                    alert('This cell already contains a sign');
-                }
-            } else if (count % 2 != 0) {
-                if (sign == "+") {
-                    $(".cell-sign6").addClass("o-sign-cell");
-                    $(".cell-sign6").text("O");
-                    $(".cell-sign6").removeClass("cell-sign6");
-                    six = "O";
-                    count++;
-                } else {
-                    alert('This cell already contains a sign');
-                }
+        } else if (count % 2 != 0) {
+            if (sign == "+") {
+                $(".cell-sign3").addClass("o-sign-cell");
+                $(".cell-sign3").text("O");
+                $(".cell-sign3").removeClass("cell-sign3");
+                count++;
+            } else {
+                alert('This cell already contains a sign');
             }
+        }
+        
+        win();
+    });
 
-            win();
-        });
-
-        $(".seven").click(function(){
-            var sign = $(".cell-sign7").text();
-            
-            if (count % 2 == 0) {
-                if (sign == "+") {
-                    $(".cell-sign7").addClass("x-sign-cell");
-                    $(".cell-sign7").text("X");
-                    $(".cell-sign7").removeClass("cell-sign7");
-                    seven = "X";
-                    count++;
-                } else {
-                    alert('This cell already contains a sign');
-                }
-            } else if (count % 2 != 0) {
-                if (sign == "+") {
-                    $(".cell-sign7").addClass("o-sign-cell");
-                    $(".cell-sign7").text("O");
-                    $(".cell-sign7").removeClass("cell-sign7");
-                    seven = "O";
-                    count++;
-                } else {
-                    alert('This cell already contains a sign');
-                }
+    // Insert a character into the fourth cell of the playing field
+    $(".four").click(function(){
+        var sign = $(".cell-sign4").text();
+        
+        if (count % 2 == 0) {
+            if (sign == "+") {
+                $(".cell-sign4").addClass("x-sign-cell");
+                $(".cell-sign4").text("X");
+                $(".cell-sign4").removeClass("cell-sign4");
+                count++;
+            } else {
+                alert('This cell already contains a sign');
             }
-
-            win();
-        });
-
-        $(".eight").click(function(){
-            var sign = $(".cell-sign8").text();
-            
-            if (count % 2 == 0) {
-                if (sign == "+") {
-                    $(".cell-sign8").addClass("x-sign-cell");
-                    $(".cell-sign8").text("X");
-                    $(".cell-sign8").removeClass("cell-sign8");
-                    eight = "X";
-                    count++;
-                } else {
-                    alert('This cell already contains a sign');
-                }
-            } else if (count % 2 != 0) {
-                if (sign == "+") {
-                    $(".cell-sign8").addClass("o-sign-cell");
-                    $(".cell-sign8").text("O");
-                    $(".cell-sign8").removeClass("cell-sign8");
-                    eight = "O";
-                    count++;
-                } else {
-                    alert('This cell already contains a sign');
-                }
+        } else if (count % 2 != 0) {
+            if (sign == "+") {
+                $(".cell-sign4").addClass("o-sign-cell");
+                $(".cell-sign4").text("O");
+                $(".cell-sign4").removeClass("cell-sign4");
+                count++;
+            } else {
+                alert('This cell already contains a sign');
             }
+        }
+        
+        win();
+    });
 
-            win();
-        });
-
-        $(".nine").click(function(){
-            var sign = $(".cell-sign9").text();
-            
-            if (count % 2 == 0) {
-                if (sign == "+") {
-                    $(".cell-sign9").addClass("x-sign-cell");
-                    $(".cell-sign9").text("X");
-                    $(".cell-sign9").removeClass("cell-sign9");
-                    nine = "X";
-                    count++;
-                } else {
-                    alert('This cell already contains a sign');
-                }
-            } else if (count % 2 != 0) {
-                if (sign == "+") {
-                    $(".cell-sign9").addClass("o-sign-cell");
-                    $(".cell-sign9").text("O");
-                    $(".cell-sign9").removeClass("cell-sign9");
-                    nine = "O";
-                    count++;
-                } else {
-                    alert('This cell already contains a sign');
-                }
+    // Insert a character into the fifth cell of the playing field
+    $(".five").click(function(){
+        var sign = $(".cell-sign5").text();
+        
+        if (count % 2 == 0) {
+            if (sign == "+") {
+                $(".cell-sign5").addClass("x-sign-cell");
+                $(".cell-sign5").text("X");
+                $(".cell-sign5").removeClass("cell-sign5");
+                count++;
+            } else {
+                alert('This cell already contains a sign');
             }
+        } else if (count % 2 != 0) {
+            if (sign == "+") {
+                $(".cell-sign5").addClass("o-sign-cell");
+                $(".cell-sign5").text("O");
+                $(".cell-sign5").removeClass("cell-sign5");
+                count++;
+            } else {
+                alert('This cell already contains a sign');
+            }
+        }
 
-            win();
-        });
-    }
+        win();
+    });
+
+    // Insert a character into the sixth cell of the playing field
+    $(".six").click(function(){
+        var sign = $(".cell-sign6").text();
+        
+        if (count % 2 == 0) {
+            if (sign == "+") {
+                $(".cell-sign6").addClass("x-sign-cell");
+                $(".cell-sign6").text("X");
+                $(".cell-sign6").removeClass("cell-sign6");
+                count++;
+            } else {
+                alert('This cell already contains a sign');
+            }
+        } else if (count % 2 != 0) {
+            if (sign == "+") {
+                $(".cell-sign6").addClass("o-sign-cell");
+                $(".cell-sign6").text("O");
+                $(".cell-sign6").removeClass("cell-sign6");
+                count++;
+            } else {
+                alert('This cell already contains a sign');
+            }
+        }
+        
+        win();
+    });
+
+    // Insert a character into the seventh cell of the playing field
+    $(".seven").click(function(){
+        var sign = $(".cell-sign7").text();
+        
+        if (count % 2 == 0) {
+            if (sign == "+") {
+                $(".cell-sign7").addClass("x-sign-cell");
+                $(".cell-sign7").text("X");
+                $(".cell-sign7").removeClass("cell-sign7");
+                count++;
+            } else {
+                alert('This cell already contains a sign');
+            }
+        } else if (count % 2 != 0) {
+            if (sign == "+") {
+                $(".cell-sign7").addClass("o-sign-cell");
+                $(".cell-sign7").text("O");
+                $(".cell-sign7").removeClass("cell-sign7");
+                count++;
+            } else {
+                alert('This cell already contains a sign');
+            }
+        }
+
+        win();
+    });
+
+    // Insert a character into the eighth cell of the playing field
+    $(".eight").click(function(){
+        var sign = $(".cell-sign8").text();
+        
+        if (count % 2 == 0) {
+            if (sign == "+") {
+                $(".cell-sign8").addClass("x-sign-cell");
+                $(".cell-sign8").text("X");
+                $(".cell-sign8").removeClass("cell-sign8");
+                count++;
+            } else {
+                alert('This cell already contains a sign');
+            }
+        } else if (count % 2 != 0) {
+            if (sign == "+") {
+                $(".cell-sign8").addClass("o-sign-cell");
+                $(".cell-sign8").text("O");
+                $(".cell-sign8").removeClass("cell-sign8");
+                count++;
+            } else {
+                alert('This cell already contains a sign');
+            }
+        }
+
+        win();
+    });
+
+    // Insert a character into the ninth cell of the playing field
+    $(".nine").click(function(){
+        var sign = $(".cell-sign9").text();
+        
+        if (count % 2 == 0) {
+            if (sign == "+") {
+                $(".cell-sign9").addClass("x-sign-cell");
+                $(".cell-sign9").text("X");
+                $(".cell-sign9").removeClass("cell-sign9");
+                count++;
+            } else {
+                alert('This cell already contains a sign');
+            }
+        } else if (count % 2 != 0) {
+            if (sign == "+") {
+                $(".cell-sign9").addClass("o-sign-cell");
+                $(".cell-sign9").text("O");
+                $(".cell-sign9").removeClass("cell-sign9");
+                count++;
+            } else {
+                alert('This cell already contains a sign');
+            }
+        }
+        
+        win();
+    });
 });

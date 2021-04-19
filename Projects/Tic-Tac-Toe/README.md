@@ -16,6 +16,8 @@ https://sagittarius1310.github.io/Projects/Tic-Tac-Toe/index.html
     - 9x9 play field;
     - Eight victory combination;
     - Put sign in cell;
+    - X is always first;
+    - Match three of the same signs in a row or diagonally to win;
     - Two players.
 - Additional:
     - X win counter;
